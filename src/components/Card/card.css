@@ -1,0 +1,137 @@
+/* desktop view */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@300;400&display=swap');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+*/
+:root{
+    --base:rgb(243, 62, 116);
+}
+
+.cardContainer{
+    margin: 16px;
+    border-radius: 0px 22px;
+    width:18vw;
+    height:46vh;
+    background-color:rgb(250, 250, 250);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+.cardContainer:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.005);
+    transition: all 0.5s;
+}
+.houseImage{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 22px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:23vh;
+}
+.info{
+    height: 20vh;
+    padding: 2vh 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+.rentalInfo{
+    padding-bottom: 2vh;
+    height: 15vh;
+    border-bottom: 0.3px solid var(--base);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* box-shadow: 0px 2px 2px rgba(40, 40, 40, 0.1); */
+}
+.houseInfo{
+    height: 5vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.houseInfo .rooms,.houseInfo .bath,.houseInfo .area{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size: 0.7em;
+    font-family: 'Noto Sans', sans-serif;
+}
+.rentalInfo .name,.rentalInfo .price,.rentalInfo .address,.rentalInfo .country{
+    font-family: 'Montserrat', sans-serif;
+}
+.rentalInfo .name{
+    color: black;
+    font-size: 1.15em;
+    font-weight: 600;
+}
+.rentalInfo .address,.rentalInfo .country{
+    font-weight: 400;
+    font-size:0.8em;
+}
+.rentalInfo .country{
+    font-weight:600;
+}
+.rentalInfo .price{
+    font-size:0.8em;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.pricing{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing:1px;
+    font-size:1.4em;
+    color: var(--base);
+}
+.heart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    padding: 3px;
+}
+.heart:hover{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.heartSym{
+    color: var(--base);
+    font-size:18px;
+}
+
+.infoIcons{
+    margin-right: 2px;
+    color: var(--base);
+    font-size:1.2em;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.pop{
+    background:var(--base);
+    color:white;
+    width: max-content;
+    padding:4px 12px 4px 5px;
+    font-size: 0.7em;
+    border-bottom-right-radius: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing:2px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+/* desktop view */
+
+@media screen and (max-width: 600px) {
+    .cardContainer{
+        width:85vw;
+    }
+}
