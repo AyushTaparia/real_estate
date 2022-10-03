@@ -2,7 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { InputLabel } from '@mui/material';
-import { MdAttachMoney} from 'react-icons/md'
+import { MdAttachMoney } from 'react-icons/md'
+import './filter.css';
 
 function valuetext(value) {
   return `$${value}°C`;
@@ -11,7 +12,7 @@ function valuetext(value) {
 export default function RangeSlider(props) {
   return (
       <Box sx={{ width: 200 }} style={{ display: 'flex',flexDirection:'column', alignItems: 'center' }}>
-          <InputLabel id="filterlables"><MdAttachMoney style={{color:"var(--base)"}} />Price Range</InputLabel>
+          <InputLabel id="filterlables" className={`filterlables ${props.theme&&'darkTheme'}`}><MdAttachMoney style={{color:"var(--base)"}} />Price Range</InputLabel>
         <Slider
             color="secondary"
             min={5000}

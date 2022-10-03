@@ -7,12 +7,17 @@ font-family: 'Noto Sans', sans-serif;
     --base:rgb(243, 62, 116);
 }
 .loc{
-    border:none;
-    outline: none;
     font-size: 1.1em;
     font-family: 'Noto Sans', sans-serif;
 }
-#filterlables{
+.filterlables{
     display:flex;
     align-items:center;
+
+}
+.filterlables.darkTheme{
+    color:white;
+}
+.datePickerLabel{
+    color:white;
 }
