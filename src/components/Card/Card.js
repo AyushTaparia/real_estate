@@ -3,9 +3,10 @@ import './card.css'
 import {FaBed,FaBath} from 'react-icons/fa'
 import {TbSquaresFilled} from 'react-icons/tb'
 import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai'
-import {BsStars} from 'react-icons/bs'
+import { BsStars } from 'react-icons/bs'
 
-export default function Card({obj}) {
+
+export default function Card({obj,theme}) {
   const imageUrl = 'assets/house' + (obj.id % 8 + 1) + '.jpg';
 
   const [like, setLike] = React.useState(false);
@@ -20,12 +21,15 @@ export default function Card({obj}) {
   }
 
   return (
-      <div className="cardContainer">
+      <div className={`cardContainer ${theme&&'darkTheme'}`}>
       <div className="houseImage" style={{ backgroundImage: `url("${imageUrl}")` }}>
       {obj.popularity&&<div className="pop"><BsStars/> POPULAR</div>}
       </div>
         <div className="info">
           <div className="rentalInfo">
+            <div className="houseType">
+              {obj.house}
+            </div>
             <div className="price">
               <div className="amt">
                 <span className="pricing">{'$'+numberWithCommas(obj.price)}</span> / month
@@ -34,7 +38,7 @@ export default function Card({obj}) {
                 {!like?<AiOutlineHeart className='heartSym' onClick={()=>{toggle()}}/>:<AiFillHeart className='heartSym' onClick={()=>{toggle()}}/>}
               </div>
             </div>
-            <div className="name">
+            <div className={`name ${theme&&'darkThemeText'}`}>
               {obj.region}
             </div>
             <div className="address">
