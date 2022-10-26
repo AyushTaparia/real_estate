@@ -23,6 +23,7 @@ font-family: 'Noto Sans', sans-serif;
 ::-webkit-scrollbar {
   width: 0px;
 }
+/* Styling Container */
 .container{
   overflow-y: hidden;
   width:100%;
@@ -30,6 +31,7 @@ font-family: 'Noto Sans', sans-serif;
   flex-direction:column;
   align-items:center;
 }
+/* Styling Landing */
 .landing{
   display: flex;
   justify-content:space-between;
